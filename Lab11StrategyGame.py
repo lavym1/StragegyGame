@@ -1,13 +1,10 @@
 #Lab 11 Vasile Danciu, Josh Jones, Lavinia Uruc
 #Spongebob SquarePants strategy text based game part 1
 
-import random
-
 def play():
-  gameState = false
   printNow("******* Spongebob Squarepants Adventure Game *******")
   help()
-  pineapple(gameState)
+  pineapple()
 
 # exit function
 def exit():
@@ -16,42 +13,36 @@ def exit():
 
   # help function
 def help():
-  printNow("\nA long time ago in a Galaxy far, far away...\n")
-  printNow("It is a time of great unrest as the evil Galactic Empire")
-  printNow("continues to conquer, ensalve and ravage the free planets of")
-  printNow("the galaxy. However, small bands of rebels have banded together") 
-  printNow("to fight the tyranny of the Empire and seek to restore the freedom and") 
-  printNow("justice known under the Old Republic. Unbeknownst to all, on the planet")
-  printNow("Naboo, a lone rebel seeks to obtain and deliver plans of a new, terrible") 
-  printNow("weapon created to crush the last vestiges of hope in the galaxy...")
-  printNow("Welcome to the Star Wars Galaxy.  You will be able to explore eight worlds in this galaxy.")  
-  printNow("On each world, you may jump to other select worlds by typing in one of the choices given.")
-  printNow("You need to pick up the plans to the Death Star to stop the Empire.\n")
-  printNow("Type \"help\" at any time to redisplay this introduction.")
-  printNow("Type \"exit\" to quit the game at any time.\n")
+  printNow("\nHow to play the game\n")
+  printNow("description line how to play ")
+  printNow("description line how to play ")
+  printNow("description line how to play ")
+  printNow("description line how to play ")
+  printNow("description line how to play ")
+  printNow("Type 'help' at any time to redisplay this introduction.")
+  printNow("Type 'exit' to quit the game at any time.\n")
 
 # location one The Pineapple house
-def pineapple(gameState):
+def pineapple():
   check = true
   # Description
-  rmDesc = "------------ Pineapple house -----------\n"
-  rmDesc += "You have arrived at the Naboo Spaceport.\n"
-  rmDesc += "Naboo is a small pastoral world located\n"
-  rmDesc += "near the border of the Outer Rim Territories.\n"
-  rmDesc += "It is inhabited by two societies - an indigenous\n"
-  rmDesc += "species of intelligent amphibians called the Gungans, and\n"
-  rmDesc += "a group of peaceful humans who are referred to as the Naboo.\n" 
-  rmDesc += "Destination choices are: \n Squidward's house,Sandy's house, The Krusty Krab, or EXIT to quit.\n"
-  printNow (rmDesc)
+  descr = "------------ Pineapple house -----------\n"
+  descr += "You have arrived home at the Pineapple house.\n"
+  descr += "description\n"
+  descr += "more descriptions.\n"
+  descr += "more descriptions.\n"
+  descr += "more descriptions.\n"
+  descr += "Destination choices are: \n Squidward's house,Sandy's house, The Krusty Krab, or EXIT to quit.\n"
+  printNow (descr)
   # destination choice loop
   while check == true:
-    dstChc = "Where would you like to go, Spongebob?\n"
-    dstChc += "Type 'west' to go to Squidward's house\n"
-    dstChc += "Type 'south' to go to Sandy's house\n"
-    dstChc += "Type 'east' to go to the Krusty Krab\n"
-    dstChc += "Type 'help' for game info.\n"
-    dstChc += "or just type 'exit' to quit."
-    chc = requestString(dstChc)
+    dirChc = "Where would you like to go, Spongebob?\n"
+    dirChc += "Type 'west' to go to Squidward's house\n"
+    dirChc += "Type 'south' to go to Sandy's house\n"
+    dirChc += "Type 'east' to go to the Krusty Krab\n"
+    dirChc += "Type 'help' for game info.\n"
+    dirChc += "or just type 'exit' to quit."
+    chc = requestString(dirChc)
     if (chc == None):
       chc = "exit"
     if chc.isdigit():
@@ -59,13 +50,13 @@ def pineapple(gameState):
     choice = chc.lower()
     if choice == "west": # for Squidward's house
       check = false
-      squidward(gameState)
+      squidward()
     elif choice == "south": # for Sandy's house
       check = false
-      sandy(gameState)
+      sandy()
     elif choice == "east": # for Krusty Krab
       check = false
-      krusty(gameState)
+      krusty()
     elif choice == "help": # for game info
       help()
     elif chc == "exit": # to exit
@@ -76,25 +67,25 @@ def pineapple(gameState):
       check = true
 
 # location two Squidward's house
-def squidward(gameState):
+def squidward():
   check = true
   # Description
-  rmDesc = "------------ Squidward's house -----------\n"
-  rmDesc += "description line.\n"
-  rmDesc += "description line.\n"
-  rmDesc += "description line.\n"
-  rmDesc += "description line.\n"
-  rmDesc += "description line.\n"
-  rmDesc += "Destination choices are: \n Patrick's house, Pineapple house, or EXIT to quit.\n"
-  printNow(rmDesc)
+  descr = "------------ Squidward's house -----------\n"
+  descr += "description line.\n"
+  descr += "description line.\n"
+  descr += "description line.\n"
+  descr += "description line.\n"
+  descr += "description line.\n"
+  descr += "Destination choices are: \n Patrick's house, Pineapple house, or EXIT to quit.\n"
+  printNow(descr)
   # destination choice loop
   while check == true:
-    dstChc = "Where would you like to go, Spongebob?\n"
-    dstChc += "Type 'west' to go to Patrick's house\n"
-    dstChc += "Type 'east' to go to the Pineapple house\n"
-    dstChc += "Type 'help' for game info.\n"
-    dstChc += "or just type 'exit' to quit."
-    chc = requestString(dstChc)
+    dirChc = "Where would you like to go, Spongebob?\n"
+    dirChc += "Type 'west' to go to Patrick's house\n"
+    dirChc += "Type 'east' to go to the Pineapple house\n"
+    dirChc += "Type 'help' for game info.\n"
+    dirChc += "or just type 'exit' to quit."
+    chc = requestString(dirChc)
     if (chc == None):
       chc = "exit"
     if chc.isdigit():
@@ -102,10 +93,10 @@ def squidward(gameState):
     choice = chc.lower()
     if choice == "west": # for Patrick's house
       check = false
-      patrick(gameState)
+      patrick()
     elif choice == "east": # for Pineapple house
       check = false
-      pineapple(gameState)
+      pineapple()
     elif choice == "help": # for game info
       help()
     elif chc == "exit": # to exit
@@ -116,25 +107,25 @@ def squidward(gameState):
       check = true
 
 # location three Patrick's house
-def patrick(gameState):
+def patrick():
   check = true
   # Description
-  rmDesc = "------------ Patrick's house -----------\n"
-  rmDesc += "description line.\n"
-  rmDesc += "description line.\n"
-  rmDesc += "description line.\n"
-  rmDesc += "description line.\n"
-  rmDesc += "description line.\n"
-  rmDesc += "Destination choices are: \n Jellyfish Fields, Squidward's house, or EXIT to quit.\n"
-  printNow(rmDesc)
+  descr = "------------ Patrick's house -----------\n"
+  descr += "description line.\n"
+  descr += "description line.\n"
+  descr += "description line.\n"
+  descr += "description line.\n"
+  descr += "description line.\n"
+  descr += "Destination choices are: \n Jellyfish Fields, Squidward's house, or EXIT to quit.\n"
+  printNow(descr)
   # destination choice loop
   while check == true:
-    dstChc = "Where would you like to go, Spongebob?\n"
-    dstChc += "Type 'south' to go to the Jellyfish Fields\n"
-    dstChc += "Type 'east' to go to Squidward's house\n"
-    dstChc += "Type 'help' for game info.\n"
-    dstChc += "or just type 'exit' to quit."
-    chc = requestString(dstChc)
+    dirChc = "Where would you like to go, Spongebob?\n"
+    dirChc += "Type 'south' to go to the Jellyfish Fields\n"
+    dirChc += "Type 'east' to go to Squidward's house\n"
+    dirChc += "Type 'help' for game info.\n"
+    dirChc += "or just type 'exit' to quit."
+    chc = requestString(dirChc)
     if (chc == None):
       chc = "exit"
     if chc.isdigit():
@@ -142,10 +133,10 @@ def patrick(gameState):
     choice = chc.lower()
     if choice == "south": # for Jellyfish Fields
       check = false
-      jelly(gameState)
+      jelly()
     elif choice == "east": # for Squidward's house
       check = false
-      squidward(gameState)
+      squidward()
     elif choice == "help": # for game info
       help()
     elif chc == "exit": # to exit
@@ -156,25 +147,25 @@ def patrick(gameState):
       check = true
 
 # location four the Jellyfish Fields
-def jelly(gameState):
+def jelly():
   check = true
   # Description
-  rmDesc = "------------ Jellyfish Fields -----------\n"
-  rmDesc += "description line.\n"
-  rmDesc += "description line.\n"
-  rmDesc += "description line.\n"
-  rmDesc += "description line.\n"
-  rmDesc += "description line.\n"
-  rmDesc += "Destination choices are: \n Patrick's house, Sandy's house, or EXIT to quit.\n"
-  printNow(rmDesc)
+  descr = "------------ Jellyfish Fields -----------\n"
+  descr += "description line.\n"
+  descr += "description line.\n"
+  descr += "description line.\n"
+  descr += "description line.\n"
+  descr += "description line.\n"
+  descr += "Destination choices are: \n Patrick's house, Sandy's house, or EXIT to quit.\n"
+  printNow(descr)
   # destination choice loop
   while check == true:
-    dstChc = "Where would you like to go, Spongebob?\n"
-    dstChc += "Type 'north' to go to Patrick's house\n"
-    dstChc += "Type 'east' to go to Sandy's house\n"
-    dstChc += "Type 'help' for game info.\n"
-    dstChc += "or just type 'exit' to quit."
-    chc = requestString(dstChc)
+    dirChc = "Where would you like to go, Spongebob?\n"
+    dirChc += "Type 'north' to go to Patrick's house\n"
+    dirChc += "Type 'east' to go to Sandy's house\n"
+    dirChc += "Type 'help' for game info.\n"
+    dirChc += "or just type 'exit' to quit."
+    chc = requestString(dirChc)
     if (chc == None):
       chc = "exit"
     if chc.isdigit():
@@ -182,10 +173,10 @@ def jelly(gameState):
     choice = chc.lower()
     if choice == "north": # for Patrick's house
       check = false
-      patrick(gameState)
+      patrick()
     elif choice == "east": # for Sandy's house
       check = false
-      sandy(gameState)
+      sandy()
     elif choice == "help": # for game info
       help()
     elif chc == "exit": # to exit
@@ -196,26 +187,26 @@ def jelly(gameState):
       check = true
 
 #location five Sandy's house
-def sandy(gameState):
+def sandy():
   check = true
   # Description
-  rmDesc = "------------ Sandy's house -----------\n"
-  rmDesc += "You have arrived at Sandy's glass dome house.\n"
-  rmDesc += "description\n"
-  rmDesc += "description\n"
-  rmDesc += "description\n"
-  rmDesc += "description\n"
-  rmDesc += "Destination choices are: \n Jellyfish Fields, Pineapple house, the Chum Bucket, or EXIT to quit.\n"
-  printNow (rmDesc)
+  descr = "------------ Sandy's house -----------\n"
+  descr += "You have arrived at Sandy's glass dome house.\n"
+  descr += "description\n"
+  descr += "description\n"
+  descr += "description\n"
+  descr += "description\n"
+  descr += "Destination choices are: \n Jellyfish Fields, Pineapple house, the Chum Bucket, or EXIT to quit.\n"
+  printNow (descr)
   # destination choice loop
   while check == true:
-    dstChc = "Where would you like to go, Spongebob?\n"
-    dstChc += "Type 'north' to go to the Pineapple house\n"
-    dstChc += "Type 'west' to go to the Jellyfish Fields\n"
-    dstChc += "Type 'east' to go to the Chum Bucket\n"
-    dstChc += "Type 'help' for game info.\n"
-    dstChc += "or just type 'exit' to quit."
-    chc = requestString(dstChc)
+    dirChc = "Where would you like to go, Spongebob?\n"
+    dirChc += "Type 'north' to go to the Pineapple house\n"
+    dirChc += "Type 'west' to go to the Jellyfish Fields\n"
+    dirChc += "Type 'east' to go to the Chum Bucket\n"
+    dirChc += "Type 'help' for game info.\n"
+    dirChc += "or just type 'exit' to quit."
+    chc = requestString(dirChc)
     if (chc == None):
       chc = "exit"
     if chc.isdigit():
@@ -223,13 +214,13 @@ def sandy(gameState):
     choice = chc.lower()
     if choice == "north": # for the Pineapple house
       check = false
-      pineapple(gameState)
+      pineapple()
     elif choice == "west": # for the Jellyfish Fields
       check = false
-      jelly(gameState)
+      jelly()
     elif choice == "east": # for the Chum Bucket
       check = false
-      chum(gameState)
+      chum()
     elif choice == "help": # for game info
       help()
     elif chc == "exit": # to exit
@@ -241,25 +232,25 @@ def sandy(gameState):
 
 
 # location six the Chum Bucket
-def chum(gameState):
+def chum():
   check = true
   # Description
-  rmDesc = "------------ Chum Bucket -----------\n"
-  rmDesc += "description line.\n"
-  rmDesc += "description line.\n"
-  rmDesc += "description line.\n"
-  rmDesc += "description line.\n"
-  rmDesc += "description line.\n"
-  rmDesc += "Destination choices are: \n The Krusty Krab, Sandy's house, or EXIT to quit.\n"
-  printNow(rmDesc)
+  descr = "------------ Chum Bucket -----------\n"
+  descr += "description line.\n"
+  descr += "description line.\n"
+  descr += "description line.\n"
+  descr += "description line.\n"
+  descr += "description line.\n"
+  descr += "Destination choices are: \n The Krusty Krab, Sandy's house, or EXIT to quit.\n"
+  printNow(descr)
   # destination choice loop
   while check == true:
-    dstChc = "Where would you like to go, Spongebob?\n"
-    dstChc += "Type 'north' to go to The Krusty Krab\n"
-    dstChc += "Type 'west' to go to Sandy's house\n"
-    dstChc += "Type 'help' for game info.\n"
-    dstChc += "or just type 'exit' to quit."
-    chc = requestString(dstChc)
+    dirChc = "Where would you like to go, Spongebob?\n"
+    dirChc += "Type 'north' to go to The Krusty Krab\n"
+    dirChc += "Type 'west' to go to Sandy's house\n"
+    dirChc += "Type 'help' for game info.\n"
+    dirChc += "or just type 'exit' to quit."
+    chc = requestString(dirChc)
     if (chc == None):
       chc = "exit"
     if chc.isdigit():
@@ -267,10 +258,10 @@ def chum(gameState):
     choice = chc.lower()
     if choice == "north": # for The Krusty Krab
       check = false
-      krusty(gameState)
+      krusty()
     elif choice == "west": # for Sandy's house
       check = false
-      sandy(gameState)
+      sandy()
     elif choice == "help": # for game info
       help()
     elif chc == "exit": # to exit
@@ -282,25 +273,25 @@ def chum(gameState):
 
 
 # location seven The Krusty Krab
-def krusty(gameState):
+def krusty():
   check = true
   # Description
-  rmDesc = "------------ The Krusty Krab -----------\n"
-  rmDesc += "description line.\n"
-  rmDesc += "description line.\n"
-  rmDesc += "description line.\n"
-  rmDesc += "description line.\n"
-  rmDesc += "description line.\n"
-  rmDesc += "Destination choices are: \n the Pinneaple house, the Chum Bucket, or EXIT to quit.\n"
-  printNow(rmDesc)
+  descr = "------------ The Krusty Krab -----------\n"
+  descr += "description line.\n"
+  descr += "description line.\n"
+  descr += "description line.\n"
+  descr += "description line.\n"
+  descr += "description line.\n"
+  descr += "Destination choices are: \n the Pinneaple house, the Chum Bucket, or EXIT to quit.\n"
+  printNow(descr)
   # destination choice loop
   while check == true:
-    dstChc = "Where would you like to go, Spongebob?\n"
-    dstChc += "Type 'south' to go to the Chum Bucket\n"
-    dstChc += "Type 'west' to go to the Pineapple house\n"
-    dstChc += "Type 'help' for game info.\n"
-    dstChc += "or just type 'exit' to quit."
-    chc = requestString(dstChc)
+    dirChc = "Where would you like to go, Spongebob?\n"
+    dirChc += "Type 'south' to go to the Chum Bucket\n"
+    dirChc += "Type 'west' to go to the Pineapple house\n"
+    dirChc += "Type 'help' for game info.\n"
+    dirChc += "or just type 'exit' to quit."
+    chc = requestString(dirChc)
     if (chc == None):
       chc = "exit"
     if chc.isdigit():
@@ -308,10 +299,10 @@ def krusty(gameState):
     choice = chc.lower()
     if choice == "south": # for the Chum Bucket
       check = false
-      chum(gameState)
+      chum()
     elif choice == "west": # for the Pineapple house
       check = false
-      pineapple(gameState)
+      pineapple()
     elif choice == "help": # for game info
       help()
     elif chc == "exit": # to exit
