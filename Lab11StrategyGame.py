@@ -1,8 +1,12 @@
-l#Lab 11 Vasile Danciu, Josh Jones, Lavinia Uruc
+#Lab 11 Vasile Danciu, Josh Jones, Lavinia Uruc
 #Spongebob SquarePants strategy text based game part 1
 
 def play():
   printNow("******* Spongebob Squarepants Adventure Game *******")
+  printNow("Are you ready, kids?")
+  printNow("Aye, aye, captain!")
+  printNow("I can't hear you!")
+  printNow("Aye, aye, captain!")
   help()
   pineapple()
 
@@ -14,11 +18,9 @@ def exit():
   # help function
 def help():
   printNow("\nHow to play the game\n")
-  printNow("description line how to play ")
-  printNow("description line how to play ")
-  printNow("description line how to play ")
-  printNow("description line how to play ")
-  printNow("description line how to play ")
+  printNow("You are Spongebob Squareants and you are traveling through your hometown, Bikini Bottom")
+  printNow("To go from one location to another,")
+  printNow("type a word like 'north', 'south', 'west',or 'east' to reach a destination ")
   printNow("Type 'help' at any time to redisplay this introduction.")
   printNow("Type 'exit' to quit the game at any time.\n")
 
@@ -26,12 +28,10 @@ def help():
 def pineapple():
   check = true
   # Description
-  descr = "------------ Pineapple house -----------\n"
-  descr += "You have arrived home at the Pineapple house.\n"
-  descr += "Pineaple house is located in the left side of the Krusty Krab\n"
-  descr += "more descriptions.\n"
-  descr += "more descriptions.\n"
-  descr += "more descriptions.\n"
+  descr = "~~~~~~~~~~~~ Pineapple house ~~~~~~~~~~~~\n"
+  descr += "You have arrived at the Pineapple house.\n"
+  descr += "This is your home. You live in a pineapple house under the sea\n"
+  descr += "with your pet snail Gary, \n"
   descr += "Destination choices are: \n Squidward's house,Sandy's house, The Krusty Krab, or EXIT to quit.\n"
   printNow (descr)
   # destination choice loop
@@ -70,12 +70,12 @@ def pineapple():
 def squidward():
   check = true
   # Description
-  descr = "------------ Squidward's house -----------\n"
-  descr += "description line.\n"
-  descr += "description line.\n"
-  descr += "description line.\n"
-  descr += "description line.\n"
-  descr += "description line.\n"
+  descr = "~~~~~~~~~~~~ Squidward's house ~~~~~~~~~~~~\n"
+  descr += "The Squidward's House is located west of the Pineaple House.\n"
+  descr += "Squidward is a cranky octopus who dislikes neighbors.\n"
+  descr += "Try not to spend to much time here.\n"
+  descr += "Squidward could get angry and you could not finish your mission in time.\n"
+  descr += "Visit other neighbors.\n"
   descr += "Destination choices are: \n Patrick's house, Pineapple house, or EXIT to quit.\n"
   printNow(descr)
   # destination choice loop
@@ -110,12 +110,13 @@ def squidward():
 def patrick():
   check = true
   # Description
-  descr = "------------ Patrick's house -----------\n"
-  descr += "description line.\n"
-  descr += "description line.\n"
-  descr += "description line.\n"
-  descr += "description line.\n"
-  descr += "description line.\n"
+  descr = "~~~~~~~~~~~~ Patrick's house ~~~~~~~~~~~~\n"
+  descr += "The house is a large brown rock with a wind vane on top.\n"
+  descr += "Like a door, the rock has hinges to open and close. \n"
+  descr += "The front yard has a long black path connecting the front of the rock and Conch Street.\n"
+  descr += "Your best friend, Patrick Star lives here.\n"
+  descr += "He is an unintelligent and overweight pink sea star,\n"
+  descr += "and he is very hungry for a KRABBY PATTY!\n"
   descr += "Destination choices are: \n Jellyfish Fields, Squidward's house, or EXIT to quit.\n"
   printNow(descr)
   # destination choice loop
@@ -150,12 +151,10 @@ def patrick():
 def jelly():
   check = true
   # Description
-  descr = "------------ Jellyfish Fields -----------\n"
-  descr += "description line.\n"
-  descr += "description line.\n"
-  descr += "description line.\n"
-  descr += "description line.\n"
-  descr += "description line.\n"
+  descr = "~~~~~~~~~~~~ Jellyfish Fields ~~~~~~~~~~~~\n"
+  descr += "A vast area in which over 4 million jellyfish reside.\n"
+  descr += "Other creatures live here such as clams, leeches, and poisonous sea urchins.\n"
+  descr += "You come here wih Patrick to have fun catching jellyfishes with your nets \n"
   descr += "Destination choices are: \n Patrick's house, Sandy's house, or EXIT to quit.\n"
   printNow(descr)
   # destination choice loop
@@ -190,12 +189,12 @@ def jelly():
 def sandy():
   check = true
   # Description
-  descr = "------------ Sandy's house -----------\n"
-  descr += "You have arrived at Sandy's glass dome house.\n"
-  descr += "description\n"
-  descr += "description\n"
-  descr += "description\n"
-  descr += "description\n"
+  descr = "~~~~~~~~~~~~ Sandy's house ~~~~~~~~~~~~\n"
+  descr += "You have arrived at your friend Sandy Cheeks glass dome house, the Treedome\n"
+  descr += "It is air-locked and contains no water, the only place in Bikini Bottom where Sandy can survive without her suit.\n"
+  descr += "Its floor is covered in grass, and features a large tree, which contains Sandy's living quarters. \n"
+  descr += "The Treedome also humorously includes a giant hamster wheel, among other backyardish things.\n"
+  descr += "The dome produces snow during the winter\n"
   descr += "Destination choices are: \n Jellyfish Fields, Pineapple house, the Chum Bucket, or EXIT to quit.\n"
   printNow (descr)
   # destination choice loop
@@ -235,12 +234,11 @@ def sandy():
 def chum():
   check = true
   # Description
-  descr = "------------ Chum Bucket -----------\n"
-  descr += "description line.\n"
-  descr += "description line.\n"
-  descr += "description line.\n"
-  descr += "description line.\n"
-  descr += "description line.\n"
+  descr = "~~~~~~~~~~~~ Chum Bucket ~~~~~~~~~~~~\n"
+  descr += "Located directly across the street from the Krusty Krab.\n"
+  descr += "Evil Plankton serves awful food here\n"
+  descr += "He is always trying to steal the Krabby Patty secret Formula.\n"
+  descr += "The restaurant looks like a bucket with a blue hand (could be a glove).\n"
   descr += "Destination choices are: \n The Krusty Krab, Sandy's house, or EXIT to quit.\n"
   printNow(descr)
   # destination choice loop
@@ -276,12 +274,11 @@ def chum():
 def krusty():
   check = true
   # Description
-  descr = "------------ The Krusty Krab -----------\n"
-  descr += "description line.\n"
-  descr += "description line.\n"
-  descr += "description line.\n"
-  descr += "description line.\n"
-  descr += "description line.\n"
+  descr = "~~~~~~~~~~~~ The Krusty Krab ~~~~~~~~~~~~\n"
+  descr += "A fast food restaurant located in Bikini Bottom, founded and owned by Eugene H. Krabs.\n"
+  descr += "It is the most popular restaurant in Bikini Bottom. Mr. Krabs loves money!\n"
+  descr += "This is were you work as a fry cook.\n"
+  descr += "If you have your spatula with you, you can flip delicious krabby patties!\n"
   descr += "Destination choices are: \n the Pinneaple house, the Chum Bucket, or EXIT to quit.\n"
   printNow(descr)
   # destination choice loop
