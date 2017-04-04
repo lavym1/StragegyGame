@@ -1,4 +1,4 @@
-#Lab 11 Vasile Danciu, Josh Jones, Lavinia Uruc
+l#Lab 11 Vasile Danciu, Josh Jones, Lavinia Uruc
 #Spongebob SquarePants strategy text based game part 1
 
 def play():
@@ -28,7 +28,7 @@ def pineapple():
   # Description
   descr = "------------ Pineapple house -----------\n"
   descr += "You have arrived home at the Pineapple house.\n"
-  descr += "description\n"
+  descr += "Pineaple house is located in the left side of the Krusty Krab\n"
   descr += "more descriptions.\n"
   descr += "more descriptions.\n"
   descr += "more descriptions.\n"
